@@ -8,6 +8,9 @@ module.exports = {
   entry: {
     index: './lib/index.tsx'
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+  },
   // 配置输出
   output: {
     path: path.resolve(__dirname, 'dist/lib'),
