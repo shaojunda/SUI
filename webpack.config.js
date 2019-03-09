@@ -15,6 +15,7 @@ module.exports = {
   },
   module: {
     rules: [
+      // 将 typescipt 编译成 js
       {
         test: /\.tsx?$/,
         loader: 'awesome-typescript-loader'
