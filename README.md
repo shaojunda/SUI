@@ -1,1 +1,1 @@
-# webpack-test
+# React Component
