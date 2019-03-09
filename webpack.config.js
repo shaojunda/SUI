@@ -7,7 +7,7 @@ module.exports = {
   entry: {
     index: './lib/index.tsx'
   },
-  // 配置输出的路径
+  // 配置输出
   output: {
     path: path.resolve(__dirname, 'dist/lib'),
     library: 'SUI', // 库的名字
