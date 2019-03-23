@@ -1,5 +1,4 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // 定义要导出的对象
 module.exports = {
@@ -14,7 +13,7 @@ module.exports = {
   // 配置输出
   output: {
     path: path.resolve(__dirname, 'dist/lib'),
-    library: 'SUI', // 库的名字
+    library: 'sui', // 库的名字
     libraryTarget: 'umd' // 库的目标格式
   },
   module: {
