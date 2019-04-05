@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/bin/bash
 
 npm version patch
 git push
