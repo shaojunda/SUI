@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Dialog from './dialog';
+import Dialog, {alert} from './dialog';
 
 export default function () {
   const [visible, setVisible] = useState(false);
@@ -29,6 +29,10 @@ export default function () {
         } onClose={() => {setVisible2(false)}}>
           <strong>hi</strong>
         </Dialog>
+      </div>
+      <div>
+        <h1>Example 3</h1>
+        <button onClick={() => {alert('1')}}>alert</button>
       </div>
     </div>
   )
