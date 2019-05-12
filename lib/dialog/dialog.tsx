@@ -9,6 +9,7 @@ interface Props {
   buttons?: Array<ReactElement>;
   onClose: React.MouseEventHandler;
   closeOnClickMask?: boolean;
+  enableMask?: boolean;
 }
 
 const scopedClass = scopedClassMaker('sui-dialog');
@@ -23,9 +24,11 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
       props.onClose(event);
     }
   };
-  const x = props.visible ?
+  const result = props.visible &&
     <Fragment>
-      <div className={scopedClass("mask")} onClick={onClickMask}/>
+      {
+        props.enableMask && <div className={scopedClass("mask")} onClick={onClickMask}/>
+      }
       <div className={scopedClass()}>
         <div className={scopedClass('close')} onClick={onClickClose}>
           <Icon name="close"/>
@@ -41,15 +44,15 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
           </footer>
         }
       </div>
-    </Fragment> :
-    null;
+    </Fragment>;
   return (
-    ReactDOM.createPortal(x, document.body)
+    ReactDOM.createPortal(result, document.body)
   )
 };
 
 Dialog.defaultProps = {
-  closeOnClickMask: false
+  closeOnClickMask: false,
+  enableMask: true
 };
 
 const modal = (content: ReactNode, buttons?: Array<ReactElement>, afterClose?: () => void) => {

@@ -19,7 +19,7 @@ export default function () {
             <button onClick={() => {setVisible(false)}}>1</button>,
             <button onClick={() => {setVisible(false)}}>2</button>
           ]
-        } onClose={() => {setVisible(false)}}>
+        } onClose={() => {setVisible(false)}} enableMask={false}>
           <strong>hi</strong>
         </Dialog>
       </div>
